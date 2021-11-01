@@ -12,7 +12,7 @@ import data from "../../data";
 
 export default function ProjectPage({ index }) {
   const project = data[index];
-  const { tech, info, info2, url, repo, images, details } = project;
+  const { tech, info, info2, url, repo, images, details, backend } = project;
   return (
     <Container>
       <H2>{project.title}</H2>
@@ -20,9 +20,14 @@ export default function ProjectPage({ index }) {
       <div className="flex justify-between">
         <ProjectPageImage images={images} />
         <div className="w-3/12">
-          <div className="mb-3">
-            <LiveSite url={url} />
-            <GitHubLink repo={repo} />
+          <div className="mb-3 flex">
+            <LiveSite url={url} backend={backend} />
+            <div className="flex flex-col">
+              <GitHubLink repo={repo} />
+              {backend.length > 0 && (
+                <GitHubLink repo={backend} text="Backend" />
+              )}
+            </div>
           </div>
           <p className="mb-6">{info2}</p>
           <Technologies tech={tech} />

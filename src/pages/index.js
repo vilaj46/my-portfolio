@@ -1,3 +1,5 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
 import * as React from "react";
 
 // Components
@@ -10,6 +12,7 @@ import H3 from "../components/pages/H3";
 /**
  * Template: https://bootstrapmade.com/demo/MyPortfolio/
  * Footer: https://codepen.io/scanfcode/pen/MEZPNd
+ * Example: https://davidsumner.co.uk/
  */
 
 /**
@@ -18,16 +21,19 @@ import H3 from "../components/pages/H3";
  * Fade Up: https://codepen.io/themechills/pen/dMamgG
  */
 
-// Add backend github link on project pages.
-
 // Synchronize image width and height.
-// Social Links - linked in, mail, github
-// Header
+
+// Add About me page and resume in the header.
 // About me section
 // Resume
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const [filterBy, setFilterBy] = React.useState("All");
+
+  return <App filterBy={filterBy} setFilterBy={setFilterBy} path="/" />;
+};
+
+const App = ({ filterBy, setFilterBy }) => {
   return (
     <main>
       <Container>
@@ -35,6 +41,10 @@ const IndexPage = () => {
         <H3>Freelance Web Developer & Co-Owner of Franklin Court Press</H3>
         <ProjectsNavBar filterBy={filterBy} setFilterBy={setFilterBy} />
         <Projects filterBy={filterBy} />
+        <div>About Me</div>
+        <a href="/resume" target="_blank" rel="norefferer">
+          RESUME
+        </a>
       </Container>
     </main>
   );

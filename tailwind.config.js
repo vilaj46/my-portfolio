@@ -21,6 +21,7 @@ module.exports = {
       primary: "#333",
       gray: "rgba(209, 213, 219, 1)",
       lightGray: "rgba(156, 163, 175, 1)",
+      white: "#ffffff",
     },
   },
   variants: {

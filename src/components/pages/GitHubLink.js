@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GitHbLink({ repo }) {
+export default function GitHbLink({ repo, text = "Github" }) {
   return (
     <a
       type="text"
@@ -9,7 +9,7 @@ export default function GitHbLink({ repo }) {
       target="_blank"
       rel="noreferrer"
     >
-      Github
+      {text}
     </a>
   );
 }

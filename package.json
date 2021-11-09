@@ -19,6 +19,7 @@
     "autoprefixer": "^10.3.7",
     "gatsby": "^4.0.0",
     "gatsby-plugin-postcss": "^5.0.0",
+    "hamburger-react": "^2.4.1",
     "postcss": "^8.3.11",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -1,13 +1,26 @@
-// eslint-disable-next-line react-hooks/exhaustive-deps
-
 import * as React from "react";
 
 // Components
-import Projects from "../components/projects/Projects";
-import ProjectsNavBar from "../components/projectsNavBar/ProjectsNavBar";
+import H2 from "../components/H2";
+import H3 from "../components/H3";
+import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
 import Container from "../components/pages/Container";
-import H2 from "../components/pages/H2";
-import H3 from "../components/pages/H3";
+import ProjectsNavBar from "../components/ProjectsNavBar";
+
+// Data
+import data from "../data";
+
+/**
+ * Fonts maybe in the readme section.
+ * Mobile friendly
+ *
+ * hero_description
+ * about me
+ * resume
+ *
+ * Website page information, unorganized.
+ */
 
 /**
  * Template: https://bootstrapmade.com/demo/MyPortfolio/
@@ -21,30 +34,16 @@ import H3 from "../components/pages/H3";
  * Fade Up: https://codepen.io/themechills/pen/dMamgG
  */
 
-// Synchronize image width and height.
-
-// Add About me page and resume in the header.
-// About me section
-// Resume
-
-const IndexPage = ({ location }) => {
+const IndexPage = () => {
   const [filterBy, setFilterBy] = React.useState("All");
-
-  return <App filterBy={filterBy} setFilterBy={setFilterBy} path="/" />;
-};
-
-const App = ({ filterBy, setFilterBy }) => {
   return (
     <main>
       <Container>
-        <H2>Hey, I'm Julian Vila</H2>
-        <H3>Freelance Web Developer & Co-Owner of Franklin Court Press</H3>
+        <H2>{data.hero}</H2>
+        <H3>{data.hero_description}</H3>
         <ProjectsNavBar filterBy={filterBy} setFilterBy={setFilterBy} />
         <Projects filterBy={filterBy} />
-        <div>About Me</div>
-        <a href="/resume" target="_blank" rel="norefferer">
-          RESUME
-        </a>
+        <AboutMe />
       </Container>
     </main>
   );

@@ -1,10 +1,15 @@
 import React from "react";
 
-import Project from "./Project";
+// Components
+import Project from "./components/Project";
 
-import data from "../../data/index.js";
+// Data
+import data from "../../data";
 
 export default function Projects({ filterBy }) {
+  const { projects } = data;
+
+  // What project we are hovering over.
   const [entered, setEntered] = React.useState("");
 
   const onMouseEnter = (title) => {
@@ -16,15 +21,15 @@ export default function Projects({ filterBy }) {
   };
 
   return (
-    <ul className="flex flex-wrap">
-      {data.map((project) => {
+    <ul className="flex flex-wrap justify-center relative z-10">
+      {projects.map((project) => {
         const { type } = project;
         if (filterBy === "All") {
           return (
             <Project
               project={project}
-              key={project.title}
               entered={entered}
+              key={project.title}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             />
@@ -34,13 +39,16 @@ export default function Projects({ filterBy }) {
             return (
               <Project
                 project={project}
-                key={project.title}
                 entered={entered}
+                key={project.title}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
               />
             );
           } else {
+            // When the page loads we don't have projects right away.
+            // This just prevents the warning message where something needs
+            // to be returned in a map function.
             return <div key={project.title}></div>;
           }
         }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Hr from "./Hr";
+import Hr from "./components/Hr";
 
 export default function NavItem({ text, filterBy, onClick }) {
   const [focused, setFocused] = React.useState(false);

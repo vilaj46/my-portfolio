@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavItem from "./NavItem";
+import NavItem from "./components/NavItem";
 
 export default function ProjectsNavBar({ filterBy, setFilterBy }) {
   const onClick = (text) => {
@@ -8,7 +8,7 @@ export default function ProjectsNavBar({ filterBy, setFilterBy }) {
   };
 
   return (
-    <ul className="flex mb-6">
+    <ul className="flex mb-6" style={{ fontFamily: "inconsolata" }}>
       <NavItem text="All" filterBy={filterBy} onClick={onClick} />
       <NavItem text="Websites" filterBy={filterBy} onClick={onClick} />
       <NavItem text="Extensions" filterBy={filterBy} onClick={onClick} />

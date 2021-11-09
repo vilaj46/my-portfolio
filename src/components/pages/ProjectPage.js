@@ -1,8 +1,8 @@
 import React from "react";
 
 import Container from "./Container";
-import H2 from "./H2";
-import H3 from "./H3";
+import H2 from "../H2";
+import H3 from "../H3";
 import LiveSite from "./LiveSite";
 import GitHubLink from "./GitHubLink";
 import Technologies from "./Technologies";
@@ -11,7 +11,8 @@ import ProjectPageImage from "./ProjectPageImage";
 import data from "../../data";
 
 export default function ProjectPage({ index }) {
-  const project = data[index];
+  const { projects } = data;
+  const project = projects[index];
   const { tech, info, info2, url, repo, images, details, backend } = project;
   return (
     <Container>

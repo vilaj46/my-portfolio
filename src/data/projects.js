@@ -20,12 +20,11 @@ const projects = [
     url: "http://www.franklincourtpress.com/",
     repo: "https://github.com/vilaj46/fcp-next",
     backend: "",
-    info: "NextJS App with Contact Form",
-    info2:
-      "This application was built to familiarize myself with the Next.js framework and to create a basic contact form.",
-    tech: ["NextJS", "Express"],
+    info: "NextJS Website with Contact Form",
+    info2: "This website was built to serve as a landing page for the company",
+    tech: ["NextJS", "Express", "Vercel", "SendGrid"],
     details:
-      "Initially this application was deployed via Heroku. After discovering Vercel, the website was promptly switched over. Vercel's serverless functions greatly reduced the contact form complexity and request speed that comes with Heroku's default product.",
+      "NextJs was used for the SEO potential with the server side rendering. A contact form was implemeneted so the email address isn't public.",
   },
   {
     title: "Ad1 & Ad2 Brief Preparation",
@@ -35,12 +34,12 @@ const projects = [
     url: "",
     repo: "https://github.com/vilaj46/ad1-ad2-briefs",
     backend: "",
-    info: "Desktop application which reads a Table of Contents, bookmarks, and hyperlinks a specific type of PDF document.",
+    info: "Electron application which combines specific PDFs, bookmarks, and hyperlinks",
     info2:
-      "This application was built to assist in preparing NYS briefs. Between the bookmarking and hyperlinking in a PDF, manually doing this is a nightmare.",
-    tech: ["React", "Electron", "Python", "Flask", "Automation"],
+      "This application was built to automate new rules created by the NYS court system.",
+    tech: ["React", "Electron", "Python", "Flask"],
     details:
-      "This desktop application was originally built to familiarize myself with electron and creating a desktop application. Setup was difficult with using a Flask backend. In the future, would just do a web app if similar technologies are used.",
+      "Certain documents were required to contain bookmarks and hyperlinks. The application will search for the Table of Contents / Authorities and create the bookmarks / hyperlink the page numbers.",
   },
   {
     title: "Mock Critical",
@@ -50,12 +49,12 @@ const projects = [
     url: "https://vilaj46.github.io/mock-critical/",
     repo: "https://github.com/vilaj46/mock-critical",
     backend: "",
-    info: "React App with Testing / Hooks",
+    info: "React Website with Testing / Hooks",
     info2:
-      "This application was built with mobile first intentions and to add unit/ integration tests.",
-    tech: ["React", "Testing", "Custom Hooks", "Mobile First Design"],
+      "This website was built with the purpose of practicing styling techniques and different types of testing.",
+    tech: ["React", "Testing", "Custom Hooks", "Mobile First"],
     details:
-      "This web application was started to practice css and mainly mobile first design. Since this was already a simple landing page, I've added unit/integration tests as well as custom hooks.",
+      "I came across an online clothing store which did not scale on mobile dimensions. Mobile first development was used when recreating this example. Since React is overkill for this type of website, I took the opportunity to add custom hooks / unit testing.",
   },
   {
     title: "Union Gables Inn",
@@ -65,12 +64,12 @@ const projects = [
     url: "https://xenodochial-swanson-ae4f70.netlify.app/",
     repo: "https://github.com/vilaj46/union-gables",
     backend: "",
-    info: "Gatsby application which makes use of styled/reusable components.",
+    info: "Gatsby Website with styled components",
     info2:
-      "This application was built because client complained of previously slow load times in wordpress app.",
-    tech: ["Gatsby", "Styled/Reusable components"],
+      "This application was built because the client complained of slow load times in their wordpress application.",
+    tech: ["Gatsby", "Styled Components", "Reusable Components"],
     details:
-      "Based off of what the client wanted, Gatsby felt like the obvious choice. The website contains a fair amount of photos and wanted a potential future with blogging. Load times from wordpress to Gatsby increased enormously.",
+      "This is a website for a bed and breakfast. They did not need a reservation system; only the possibility of a blog. Gatsby was chosen because of the easy to create/setup blog and for the image optimization.",
   },
   {
     title: "Glorified Todo",
@@ -82,10 +81,10 @@ const projects = [
     backend: "https://github.com/vilaj46/glorified-todo-backend",
     info: "Your standard todo application with authentication.",
     info2:
-      "This application was built to enforce CRUD capabilities and deployment.",
-    tech: ["React", "CRUD", "Express", "Restful", "Mongo"],
+      "This website was built to enforce CRUD operations and a more advanced deployment.",
+    tech: ["React", "CRUD", "Express", "Restful", "Mongo", "Mlab", "Heroku"],
     details:
-      "The design was kept simple with the purpose to focus on additional features. This application works without logging in but does not save state. However, you are able to create an account and save your list.",
+      "After working in the local environment with Express / MongoDB, I wanted to make sure that the practice projects with authentication and a database could be deployed properly.",
   },
   {
     title: "Document Downloader/Sidebar - Firefox",
@@ -96,10 +95,11 @@ const projects = [
     repo: "https://github.com/vilaj46/nyscef-document-downloader",
     backend: "",
     info: "Sidebar extension used to download documents on NYSCEF.",
-    info2: "This extension was built to ease the downloading of court records.",
+    info2:
+      "This browser extension was built to ease the downloading of court records.",
     tech: ["JavaScript"],
     details:
-      "This extension was originally built to enforce Vanilla JS knowledge. Scaling the application became difficult for new implementations.",
+      "After using React for a while, I wanted to re-enforce Vanilla JS and its scaling ability.",
   },
   {
     title: "Document Downloader/Popup - Chrome",
@@ -110,10 +110,11 @@ const projects = [
     repo: "https://github.com/vilaj46/nyscef-document-download-react",
     backend: "",
     info: "Assistance to download specific documents",
-    info2: "This extension was built to ease the downloading of court records.",
+    info2:
+      "This browser extension was built to ease the downloading of court records.",
     tech: ["React"],
     details:
-      "After building the initial iteration, this extension was built with React for better scaling.",
+      "The original version of this extension was built with vanilla JS. The React iteration was created for a larger scaling purpose and use of life cycle methods.",
   },
   {
     title: "Easy Headers",
@@ -125,10 +126,10 @@ const projects = [
     backend: "https://github.com/vilaj46/pdf-ui-backend",
     info: "Page Numbers and Headers UI for PDF documents",
     info2:
-      "This application was built to ease the adding multiple headers to a PDF document.",
+      "This website was built to ease adding multiple headers to a PDF document.",
     tech: ["React", "Flask"],
     details:
-      "Most of this application is done in the backend. Simple routes are set up and with the help of a python pdf library changes can be made to a pdf document.",
+      "Most of this application is done in the backend. Simple routes are set up and with the help of a python PDF library changes can be made to a PDF document.",
   },
 ];
 

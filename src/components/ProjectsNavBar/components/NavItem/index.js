@@ -2,7 +2,7 @@ import React from "react";
 
 import Hr from "./components/Hr";
 
-export default function NavItem({ text, filterBy, onClick }) {
+export default function NavItem({ text, filterBy, onClick, right }) {
   const [focused, setFocused] = React.useState(false);
 
   const onMouseEnter = () => {
@@ -14,9 +14,10 @@ export default function NavItem({ text, filterBy, onClick }) {
   };
 
   const showHR = filterBy === text || focused === true;
+  const textRight = right ? "justify-end" : "justify-start";
 
   return (
-    <li className="mr-6">
+    <li className={`flex ${textRight} sm:justify-start`}>
       <button
         className="mb-1"
         onClick={() => onClick(text)}
@@ -26,8 +27,8 @@ export default function NavItem({ text, filterBy, onClick }) {
         onKeyDown={onMouseLeave}
       >
         {text}
+        {showHR && <Hr />}
       </button>
-      {showHR && <Hr />}
     </li>
   );
 }

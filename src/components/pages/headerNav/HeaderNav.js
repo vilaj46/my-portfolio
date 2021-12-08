@@ -10,18 +10,27 @@ export default function HeaderNav({ isOpen }) {
   return (
     <div
       className={`
-      justify-between
-      z-40 bg-white transition duration-1000 
-      ease-in-out
+        absolute -top-0
+        justify-between
+        z-20 bg-white transition duration-1000 
+        ease-in-out
+        w-full
       `}
-      style={{ width: "100%" }}
     >
       {isOpen && (
-        <ul className="bg-blue top-0 flex z-30 w-full">
-          <Category text="Websites" projects={websites} />
-          <Category text="Extensions" projects={extensions} />
-          <Category text="Applications" projects={applications} />
-        </ul>
+        <div className="bg-blue">
+          <h1
+            className="ml-4 text-2xl text-white"
+            style={{ fontFamily: "inconsolata" }}
+          >
+            <Link to="/">MyPortfolio</Link>
+          </h1>
+          <ul className=" top-0 flex z-30 w-full justify-around">
+            <Category text="Websites" projects={websites} />
+            <Category text="Extensions" projects={extensions} />
+            <Category text="Applications" projects={applications} />
+          </ul>
+        </div>
       )}
     </div>
   );

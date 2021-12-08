@@ -8,11 +8,29 @@ export default function ProjectsNavBar({ filterBy, setFilterBy }) {
   };
 
   return (
-    <ul className="flex mb-6" style={{ fontFamily: "inconsolata" }}>
-      <NavItem text="All" filterBy={filterBy} onClick={onClick} />
-      <NavItem text="Websites" filterBy={filterBy} onClick={onClick} />
-      <NavItem text="Extensions" filterBy={filterBy} onClick={onClick} />
-      <NavItem text="Applications" filterBy={filterBy} onClick={onClick} />
+    <ul
+      className="grid grid-cols-2 sm:grid-cols-4 mb-6"
+      style={{ fontFamily: "inconsolata" }}
+    >
+      <NavItem text="All" filterBy={filterBy} onClick={onClick} right={false} />
+      <NavItem
+        text="Websites"
+        filterBy={filterBy}
+        onClick={onClick}
+        right={true}
+      />
+      <NavItem
+        text="Extensions"
+        filterBy={filterBy}
+        onClick={onClick}
+        right={false}
+      />
+      <NavItem
+        text="Applications"
+        filterBy={filterBy}
+        onClick={onClick}
+        right={true}
+      />
     </ul>
   );
 }

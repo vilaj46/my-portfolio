@@ -30,11 +30,12 @@ export default function ProjectPage({ index }) {
               )}
             </div>
           </div>
-          <p className="mb-6">{info2}</p>
+
           <Technologies tech={tech} />
         </div>
       </div>
-      <p className="mt-12">{details}</p>
+      <p className="mt-12">{info2}</p>
+      <p className="mt-6">{details}</p>
     </Container>
   );
 }

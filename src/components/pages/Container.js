@@ -8,26 +8,33 @@ import HeaderNav from "./headerNav/HeaderNav";
 export default function Container({ children }) {
   const [isOpen, setOpen] = React.useState(false);
   return (
-    <div className="container mx-auto m-12 text-primary relative">
+    <div className="container mx-auto m-12 text-primary relative w-10/12 md:w-full">
+      <HeaderNav isOpen={isOpen} />
+      <div className="absolute -top-0 right-0 z-50">
+        {isOpen && (
+          <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
+        )}
+
+        {!isOpen && (
+          <Hamburger toggled={isOpen} toggle={setOpen} color="black" />
+        )}
+      </div>
       <div className="flex">
         <div
           className={`
-        flex
-        justify-between
-        w-full
-        ${isOpen ? "absolute" : "static"}`}
+            flex
+            justify-between
+            w-full
+            ${isOpen ? "absolute" : "static"}
+          `}
         >
           <h1 className="mb-12 text-2xl" style={{ fontFamily: "inconsolata" }}>
             <Link to="/">MyPortfolio</Link>
           </h1>
-          <HeaderNav isOpen={isOpen} />
         </div>
-        <div className="ml-auto absolute right-0 z-50">
+        {/* <div className="ml-auto absolute right-0 z-50">
           {!isOpen && <Hamburger toggled={isOpen} toggle={setOpen} />}
-          {isOpen && (
-            <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
-          )}
-        </div>
+        </div> */}
       </div>
 
       <div

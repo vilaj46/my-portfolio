@@ -8,10 +8,10 @@ import HeaderNav from "./headerNav/HeaderNav";
 export default function Container({ children }) {
   const [isOpen, setOpen] = React.useState(false);
   return (
-    <div className="container mx-auto m-12 text-primary relative w-10/12 md:w-full">
+    <div className="container mx-auto m-12 text-primary relative w-11/12 md:w-full">
       <HeaderNav isOpen={isOpen} />
       <div
-        className="absolute -top-0 right-0 z-50"
+        className="ml-2 absolute -top-0 right-0 z-50"
         style={{
           boxShadow: `${isOpen ? "" : "1px 1px 3px 1px #333"}`,
         }}
@@ -39,9 +39,6 @@ export default function Container({ children }) {
             <Link to="/">MyPortfolio</Link>
           </h1>
         </div>
-        {/* <div className="ml-auto absolute right-0 z-50">
-          {!isOpen && <Hamburger toggled={isOpen} toggle={setOpen} />}
-        </div> */}
       </div>
 
       <div

@@ -37,13 +37,13 @@ import data from "../data";
 const IndexPage = () => {
   const [filterBy, setFilterBy] = React.useState("All");
   return (
-    <main>
+    <main style={{ overflow: "hidden" }}>
       <Container>
         <H2>{data.hero}</H2>
         <H3>{data.hero_description}</H3>
         <ProjectsNavBar filterBy={filterBy} setFilterBy={setFilterBy} />
         <Projects filterBy={filterBy} />
-        <AboutMe />
+        {/* <AboutMe /> */}
       </Container>
     </main>
   );

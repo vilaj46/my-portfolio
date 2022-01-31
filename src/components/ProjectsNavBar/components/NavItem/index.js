@@ -27,7 +27,7 @@ export default function NavItem({ text, filterBy, onClick, right }) {
         onKeyDown={onMouseLeave}
       >
         {text}
-        {showHR && <Hr />}
+        <Hr showHR={showHR} />
       </button>
     </li>
   );

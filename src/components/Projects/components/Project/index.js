@@ -15,9 +15,8 @@ export default function Project({
   return (
     <li
       key={title}
-      className="cursor-pointer relative mx-12 mb-12"
-      style={{ width: "37%" }}
-      // w-1/3
+      className="cursor-pointer relative mb-12 md:w-45 mx-2"
+      style={{ border: "2px solid lightgray" }}
     >
       <Link
         to={href}

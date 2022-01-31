@@ -1,26 +1,37 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import ResumeButton from "../../ResumeButton.js";
+
 import { sortProjectsByType } from "../../../data/projects";
 
 export default function HeaderNav({ isOpen }) {
   const websites = sortProjectsByType("Websites");
   const extensions = sortProjectsByType("Extensions");
   const applications = sortProjectsByType("Applications");
+
+  const display = isOpen ? "block" : "hidden";
+  const opacity = isOpen ? "opacity-100" : "opacity-0";
+
+  // w-full
   return (
     <div
       className={`
         absolute -top-0
         justify-between
-        z-20 bg-white transition duration-1000 
+        z-20 bg-white transition duration-3000
         ease-in-out
-        w-full
+        transform
+        -translate-x-1/4
+        ${display}
+        ${opacity}
       `}
+      style={{ width: "200%" }}
     >
-      {isOpen && (
-        <div className="bg-blue">
+      <div className={`bg-blue`}>
+        <div className="container mx-auto">
           <h1
-            className="ml-4 text-2xl text-white"
+            className="ml-2 text-2xl text-white"
             style={{ fontFamily: "inconsolata" }}
           >
             <Link to="/">MyPortfolio</Link>
@@ -31,19 +42,32 @@ export default function HeaderNav({ isOpen }) {
             <Category text="Applications" projects={applications} />
           </ul>
         </div>
-      )}
+        <div className="absolute bottom-3 right-3 text-white">
+          <ResumeButton invert={true} />
+        </div>
+      </div>
     </div>
   );
 }
 
 function Category({ text, projects }) {
   return (
-    <li className="mx-3 mt-6 text-white text-xs">
-      <p className="underline mb-3">{text}</p>
+    <li
+      className="mx-3 mt-6 text-white text-xs"
+      style={{
+        textAlign: "center",
+      }}
+    >
+      <p className="underline mb-3 sm:text-center">{text}</p>
       <ul>
         {projects.map((project) => (
-          <li key={project.href} className="mb-6 hover:underline">
-            <Link to={`/${project.href}/`}>{project.title}</Link>
+          <li
+            key={project.href}
+            className="mb-6 hover:underline sm:text-center"
+          >
+            <Link to={`/${project.href}/`} className="sm:block sm:text-center">
+              {project.title}
+            </Link>
           </li>
         ))}
       </ul>

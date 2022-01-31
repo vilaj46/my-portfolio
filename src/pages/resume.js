@@ -1,6 +1,6 @@
 import React from "react";
 
-import pdf from "../pdfs/resume.pdf";
+import pdf from "../pdfs/Julian_Vila_Resume.pdf";
 
 import Container from "../components/pages/Container";
 

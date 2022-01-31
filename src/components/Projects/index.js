@@ -21,7 +21,9 @@ export default function Projects({ filterBy }) {
   };
 
   return (
-    <ul className="flex flex-wrap justify-center relative z-10">
+    <ul
+      className="flex flex-wrap justify-center relative z-10"
+    >
       {projects.map((project) => {
         const { type } = project;
         if (filterBy === "All") {

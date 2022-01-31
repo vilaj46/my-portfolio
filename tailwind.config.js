@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        "45": "45%",
+      },
       keyframes: {
         fadeUp: {
           from: { transform: "translate3d(0,40px,0)", opacity: "0" },

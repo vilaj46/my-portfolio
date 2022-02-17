@@ -12,7 +12,7 @@ import FooterIcon from "./FooterIcon";
 
 export default function Footer() {
   return (
-    <div className="mt-24 flex justify-center">
+    <div className="mt-full flex justify-center">
       <FooterIcon
         src={linkedIn}
         alt="Linked In"

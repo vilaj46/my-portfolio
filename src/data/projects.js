@@ -21,10 +21,11 @@ const projects = [
     repo: "https://github.com/vilaj46/fcp-next",
     backend: "",
     info: "NextJS Website with Contact Form",
-    info2: "This website was built to serve as a landing page for the company",
+    info2:
+      "A responsive web application serving it's main purpose as a landing/information page and contact form.",
     tech: ["NextJS", "Express", "Vercel", "SendGrid"],
-    details:
-      "NextJs was used for the SEO potential with the server side rendering. A contact form was implemeneted so the email address isn't public.",
+    details: "",
+    // "NextJs was used for the SEO potential with the server side rendering. A contact form was implemeneted so the email address isn't public.",
   },
   {
     title: "Ad1 & Ad2 Brief Preparation",

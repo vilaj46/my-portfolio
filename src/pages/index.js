@@ -3,7 +3,7 @@ import * as React from "react";
 // Components
 import H2 from "../components/H2";
 import H3 from "../components/H3";
-import AboutMe from "../components/AboutMe";
+// import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Container from "../components/pages/Container";
 import ProjectsNavBar from "../components/ProjectsNavBar";
